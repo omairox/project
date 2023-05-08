@@ -1,0 +1,41 @@
+/* nav bar */
+
+.topnav {
+    overflow: hidden;
+    background-color: #f5acc4;
+    
+  }
+  
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    
+  }
+  
+  .topnav a:hover {
+    background-color: #ddd;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color: #2e0177;
+    color: white;
+  }
+
+  h1 {
+    text-align: center;
+    color: white;
+  }
+
+  html {
+    background: #333;
+    background: linear-gradient(25deg, #111, #7F95D1);
+  }
+  
+  body {
+    font-family: Roboto;
+  }
