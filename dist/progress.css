@@ -2,7 +2,7 @@
 
 .topnav {
     overflow: hidden;
-    background-color: #f5acc4;
+    background-color: #f7c17b;
     
   }
   
@@ -21,21 +21,91 @@
     color: black;
   }
   
-  .topnav a.active {
-    background-color: #2e0177;
-    color: white;
-  }
+
 
   h1 {
     text-align: center;
     color: white;
   }
 
-  html {
-    background: #333;
-    background: linear-gradient(25deg, #111, #7F95D1);
-  }
-  
   body {
     font-family: Roboto;
+    height: 100vh;
+    width: 100%;
+    background: #0f2027; /* fallback for old browsers */
+    background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
+    
   }
+
+  table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 40%;
+    margin-left: auto; 
+    margin-right: auto;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #dddddd;
+  }
+
+  /* ----------------- add entry form --------------------- */
+
+  /* styles for the pop-up form */
+#myForm {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+/* styles for the overlay */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 999;
+  display: none;
+}
+
+
+
+
+
+
+
+
+
+button {
+  background-color: #f7c17b;
+  margin: 10px; 
+  padding: 7px;
+  border-radius: 10px;
+  cursor: pointer;
+  font-family: 'Bruno Ace SC', cursive;
+  text-align: center;
+  margin: 0 auto;
+}
+
+button:hover {	
+  background-color: white;
+  box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+}
+
+.centerbutton {
+  text-align: center;
+  padding-top: 20px;
+}

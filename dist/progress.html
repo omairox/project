@@ -3,6 +3,8 @@
 <head>
     <title>Document</title>
     <link rel="stylesheet" href="./progress.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,900'><link rel="stylesheet" href="./progress.css">
 </head>
 <body>
     
@@ -12,9 +14,63 @@
         <a href="./progress.html">Progress</a>
         <a href="./contact.html">Contact</a>
       
-      </div>
+    </div>
     <h1>Progress</h1>
 
+    <div id="myForm" style="display: none;">
+    <form>
+        <!-- your form fields here -->
+        <label for="date">Date:</label>
+        <input type="text" id="date" name="date">
+        
+        <label for="weight">Weight:</label>
+        <input type="number" id="weight" name="weight">
 
+        <label for="progress">Progress Notes:</label>
+        <input type="text" id="progressnote" name="progress">
+        
+        <input type="submit" id="submitprogress" value="Submit">
+    </form>
+    </div>
+
+
+
+    <table id="progressInput">
+        <tr>
+          <th>Date</th>
+          <th>Weight</th>
+          <th>Progress with Weekly Goal</th>
+
+        </tr>
+
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td></td>
+          <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+          <tr>
+            <td></td>
+            <td></td>
+            <td></td>
+        </tr>
+          
+
+      </table>
+
+      <div class="centerbutton"><button id="myButton">Add Entry</button></div>
+      
+
+    <script src="./progress.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
 </html>

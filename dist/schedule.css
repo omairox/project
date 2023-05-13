@@ -1,8 +1,8 @@
-/* nav bar */
+/* ---------------------------------------------nav bar --------------------------------------------*/
 
 .topnav {
     overflow: hidden;
-    background-color: #f5acc4;
+    background-color: #f7c17b;
     
   }
   
@@ -21,21 +21,97 @@
     color: black;
   }
   
-  .topnav a.active {
-    background-color: #2e0177;
-    color: white;
-  }
 
   h1 {
     text-align: center;
     color: white;
   }
 
-  html {
-    background: #333;
-    background: linear-gradient(25deg, #111, #7F95D1);
-  }
-  
+
   body {
     font-family: Roboto;
+    height: 100vh;
+    width: 100%;
+    background: #0f2027; /* fallback for old browsers */
+    background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
   }
+
+/* --------------------------------------------------COLUMN----------------------------------- */
+
+  .column {
+    float: left;
+    width: 14%;
+    border-color: #111;
+    text-align: center;
+    border: 1px solid #dddddd;
+  }
+
+  #column1 {
+    margin-left: 10px;
+  }
+  
+  /* Clear floats after the columns */
+  .row:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+
+  /* ---------------------------------------------------INPUT------------------------------------------------ */
+
+  .form__label {
+    font-family: 'Roboto', sans-serif;
+    font-size: 0.9rem; /* decrease font-size */
+    margin-left: 0.7rem; /* decrease left margin */
+    margin-top: 0.7rem;
+    display: block;
+    transition: all 0.3s;
+    transform: translateY(0rem);
+  }
+  
+  .form__input {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    font-size: 0.9rem; /* decrease font-size */
+    margin: 0 auto;
+    padding: 0.3rem 1.2rem; /* decrease top and bottom padding */
+    border-radius: 0.2rem;
+    background-color: rgb(255, 255, 255);
+    border: none;
+    width: 50%;
+    display: block;
+    border-bottom: 0.3rem solid transparent;
+    transition: all 0.3s;
+    margin-left: 3.3rem; /* decrease left margin */
+  }
+  
+  .form__input:placeholder-shown + .form__label {
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: translateY(-4rem);
+    transform: translateY(-4rem);
+  }
+
+  /*------------------------------------------------------ BUTTON --------------------------------------------------------*/
+
+  button {
+    background-color: #f7c17b;
+    margin: 10px; 
+    padding: 7px;
+    border-radius: 10px;
+    cursor: pointer;
+    font-family: 'Bruno Ace SC', cursive;
+  }
+  
+  button:hover {	
+    background-color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24),0 17px 50px 0 rgba(0,0,0,0.19);
+  }
+
+  /* -------------------------------------------CHECK BOX -------------------------------------------- */
+
+  /* .bottom {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+  } */

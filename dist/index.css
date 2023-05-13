@@ -1,5 +1,6 @@
 .muscle-groups {
-  margin-left: 275px;
+  margin-left: 10px;
+  margin-right: 200px;
   position: relative;
   background: #eee;
   width: 320px;
@@ -7,12 +8,13 @@
   border-radius: 5px;
   box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.5);
   overflow: hidden;
-  border-top: 0.75rem solid #2e0177;
+  border-top: 0.75rem solid #f7c17b;
+  margin-bottom: 300px;
 }
 .muscle-groups h1 {
   margin: -0.5rem -1rem 1rem;
   padding: 0 1rem 0.75rem;
-  background: #2e0177;
+  background: #f7c17b;
   color: #eee;
   text-align: center;
   font-size: 1.25rem;
@@ -173,13 +175,12 @@
   fill: #00BCD4 !important;
 }
 
-html {
-  background: #333;
-  background: linear-gradient(25deg, #111, #7F95D1);
-}
-
 body {
   font-family: Roboto;
+  height: 100vh;
+	width: 100%;
+  background: #0f2027; /* fallback for old browsers */
+  background: linear-gradient(to right,#2c5364, #203a43, #0f2027);
 }
 
 main {
@@ -190,32 +191,28 @@ main {
   width: 100%;
   padding: 2rem 0;
 }
-main .info {
+main .exercises {
   display: inline-block;
   padding-top: 200px;
-  padding-left: 500;
+  padding-left: 500px;
   opacity: .5;
 
 }
 
-.info {
-  padding-left: 500px;
-}
 
-.info p {
-  padding-right: 100px
-}
+
+
 
 h1 {
   text-align: center;
-  color: white
+  color: white;
 }
 
 /* nav bar */
 
 .topnav {
   overflow: hidden;
-  background-color: #f5acc4;
+  background-color: #f7c17b;
   
 }
 
@@ -234,11 +231,9 @@ h1 {
   color: black;
 }
 
-.topnav a.active {
-  background-color: #2e0177;
-  color: white;
-}
 
-aside {
-
+.exercise {
+  border: 1px solid black;
+  padding: 20px;
+  margin: 20px;
 }

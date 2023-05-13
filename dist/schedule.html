@@ -3,6 +3,8 @@
 <head>
     <title>Document</title>
     <link rel="stylesheet" href="./schedule.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+    <link rel='stylesheet' href='https://fonts.googleapis.com/css?family=Roboto:400,900'><link rel="stylesheet" href="./schedule.css">
 </head>
 <body>
 
@@ -15,5 +17,112 @@
       </div>
     <h1>Weekly Schedule</h1>
 
+    <div class="row">
+
+        <div class="column" id="column1">
+            <h2>Sunday</h2>
+            <form>
+                <div class="form__group">
+                    <input type="text" class="form__input" id="name" placeholder="Exercise" required="" />
+                    <label for="name" class="form__label">Exercise</label>
+                    <input type="text" class="form__input" id="name" placeholder="SetsxReps" required="" />
+                    <label for="name" class="form__label">SetsxReps</label>
+                </div>
+                <button id="button1">Add Exercise</button>
+            </form>
+            <section class="addcard1"></section>
+            <button>Mark Rest Day</button>
+        </div>
+
+        <div class="column">
+            <h2>Monday</h2>
+            <form>
+                <div class="form__group">
+                    <input type="text" class="form__input" id="monexercise" placeholder="Exercise" required="" />
+                    <label for="name" class="form__label">Exercise</label>
+                    <input type="text" class="form__input" id="monsetsreps" placeholder="SetsxReps" required="" />
+                    <label for="name" class="form__label">SetsxReps</label>
+                </div>
+                <button id="button2">Add Exercise</button>
+            </form>
+            <section class="addcard2"></section>
+            <button>Mark Rest Day</button>
+        </div>
+
+        <div class="column">
+            <h2>Tuesday</h2>
+            <form>
+                <div class="form__group">
+                    <input type="text" class="form__input" id="name" placeholder="Exercise" required="" />
+                    <label for="name" class="form__label">Exercise</label>
+                    <input type="text" class="form__input" id="name" placeholder="SetsxReps" required="" />
+                    <label for="name" class="form__label">SetsxReps</label>
+                </div>
+                <button>Add Exercise</button>
+            </form>
+            <!-- <div class="bottom"> -->
+            <button>Mark Rest Day</button>
+            <!-- </div> -->
+        </div>
+
+        <div class="column">
+            <h2>Wednesday</h2>
+            <form>
+                <div class="form__group">
+                    <input type="text" class="form__input" id="name" placeholder="Exercise" required="" />
+                    <label for="name" class="form__label">Exercise</label>
+                    <input type="text" class="form__input" id="name" placeholder="SetsxReps" required="" />
+                    <label for="name" class="form__label">SetsxReps</label>
+                </div>
+                <button>Add Exercise</button>
+            </form>
+            <button>Mark Rest Day</button>
+        </div>
+
+        <div class="column">
+            <h2>Thursday</h2>
+            <form>
+                <div class="form__group">
+                    <input type="text" class="form__input" id="name" placeholder="Exercise" required="" />
+                    <label for="name" class="form__label">Exercise</label>
+                    <input type="text" class="form__input" id="name" placeholder="SetsxReps" required="" />
+                    <label for="name" class="form__label">SetsxReps</label>
+                </div>
+                <button>Add Exercise</button>
+            </form>
+            <button>Mark Rest Day</button>
+        </div>
+
+        <div class="column">
+            <h2>Friday</h2>
+            <form>
+                <div class="form__group">
+                    <input type="text" class="form__input" id="name" placeholder="Exercise" required="" />
+                    <label for="name" class="form__label">Exercise</label>
+                    <input type="text" class="form__input" id="name" placeholder="SetsxReps" required="" />
+                    <label for="name" class="form__label">SetsxReps</label>
+                </div>
+                <button>Add Exercise</button>
+            </form>
+            <button>Mark Rest Day</button>
+        </div>
+
+        <div class="column">
+            <h2>Saturday</h2>
+            <form>
+                <div class="form__group">
+                    <input type="text" class="form__input" id="name" placeholder="Exercise" required="" />
+                    <label for="name" class="form__label">Exercise</label>
+                    <input type="text" class="form__input" id="name" placeholder="SetsxReps" required="" />
+                    <label for="name" class="form__label">SetsxReps</label>
+                </div>
+                <button>Add Exercise</button>
+            </form>
+            <button>Mark Rest Day</button>
+        </div>
+
+      </div>
+      <script  src="./schedule.js"></script>
+      <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </body>
-</html>
+</html> 
