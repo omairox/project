@@ -1,3 +1,10 @@
+const progRow = document.getElementById('myTable')
+const dateInput = document.getElementById('date')
+const weightInput = document.getElementById('weight')
+const progressInput = document.getElementById('progressnote')
+const submit = document.getElementById('submitprogress')
+
+
 
 // get the button and form elements
 var myButton = document.getElementById("myButton");
@@ -19,57 +26,28 @@ myForm.addEventListener("submit", function(event) {
 });
 
 
-
-// -----------------post progress ------------------
-
-const progRow = document.getElementById('myTable')
-// const dateInput = document.getElementById('date').value
-// const weightInput = document.getElementById('weight').value
-// const progressInput = document.getElementById('progressnote').value
-const submit = document.getElementById('submitprogress')
-
-
-
-
-
-const getProgress = () => {
-    progRow.innerHTML=''
-
-    axios.get('http://localhost:4000/api/progress')
-    .then(res => {
-        console.log(res)
-        addRow(res.data)
-    })
-}
-
-
 const handleSubmit = e => {
     e.preventDefault()
 
-    const dateInput = document.getElementById('date').value
-    const weightInput = document.getElementById('weight').value
-    const progressInput = document.getElementById('progressnote').value
-
     let body = {
         date: dateInput,
-        weight: parseInt(weightInput),
+        weight: weightInput,
         progress: progressInput
     }
-    console.log(body)
+
     axios.post('http://localhost:4000/api/progress', body)
     .then(() => {
         dateInput.value = ''
         weightInput.innerHTML = ''
         progressInput.innerHTML = ''
-        getProgress()
+        // getProgress()
     })
 
 }
 
-
+submit.addEventListener('submit',handleSubmit)
 
 function addRow(elem) {
-  console.log(elem)
     // Get the table element by its ID
     var table = document.getElementById("myTable");
   
@@ -95,4 +73,9 @@ function addRow(elem) {
     table.appendChild(row);
   }
 
-submit.addEventListener('click',handleSubmit)
+
+const nin = () => {
+    console.log('eprkf')
+}
+
+nin()

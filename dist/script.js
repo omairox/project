@@ -44,7 +44,7 @@ document.querySelectorAll(".muscle-groups svg g g[id]").forEach(function(group) 
 
 // const showCard = () => {
 
-//   axios.get('http://localhost:4000/exercises')
+//   axios.get('http://localhost:4000/api/exercises')
 //   .then(res => createCard(res.data))
 // }
 
@@ -57,7 +57,7 @@ document.querySelectorAll(".muscle-groups svg g g[id]").forEach(function(group) 
 //     `
 //     <div class= 'exercise'>
 //       <h2>${item.name}</h2>
-//       <p>${item['sets_reps']}</h2}
+//       <p>${item.setsReps}</h2}
 //     </div>
 //     `
 //     exercise.innerHTML += exerciseCard
@@ -75,47 +75,16 @@ document.querySelectorAll(".muscle-groups svg g g[id]").forEach(function(group) 
 // -------------------------------------------------- THIS USING THE ARRAY OF OBJECTS -----------------------------------
 
 
-const exercisesArray = [
-
-  {
-      id: 1,
-      muscleGroup: 'traps',
-      name: 'shoulder shrug',
-      setsReps: '3 sets x 10 reps',
-      videoLink: 'pew'
-  },
-
-  {   id: 2,
-      muscleGroup: 'traps',
-      name: 'facepulls',
-      setsReps: '3 sets x 15 reps',
-      videoLink: 'pew'
-  },
-
-  {   id: 3,
-      muscleGroup: 'lats',
-      name: 'lat pulldown',
-      setsReps: '3 sets x 12 reps',
-      videoLink: 'pew'
-  },
-
-  {   id: 4,
-      muscleGroup: 'lats',
-      name: 'dumbbell rows',
-      setsReps: '4 sets x 10 reps',
-      videoLink: 'pew'
-  },
-  
-
-]
 
 // --------------------------------- exercises page stuff -------------------------------------------
 
 const exercise = document.querySelector('.exercises')
 
-const showCard = (id) => {
+const showCard = (event) => {
 
-  axios.get(`http://localhost:4000/api/exercises/${id}`)
+  cardID = event.target.id;
+
+  axios.get(`http://localhost:4000/api/exercises/${cardID}`)
   .then(res => createCard(res.data)).catch(err => console.log(err))
 }
 
@@ -129,6 +98,7 @@ const createCard = (arr) => {
     <div class= 'exercise'>
       <h2>${item.name}</h2>
       <p>${item.setsReps}</p>
+      <p>${item.videoLink}</p>
     </div>
     `
     exercise.innerHTML += exerciseCard

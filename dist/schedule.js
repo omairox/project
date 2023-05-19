@@ -1,27 +1,5 @@
 // ----------------------------------------schedule page stuff --------------------------------------------
 
-// checkbox 
-
-const restDayBox = document.querySelectorAll('input[type="checkbox"]');
-
-
-const handleClick = () => {
-  if (this.checked) {
-    // Do something if the checkbox is checked
-    console.log(`Checkbox ${this.id} is checked`);
-  } else {
-    // Do something else if the checkbox is not checked
-    console.log(`Checkbox ${this.id} is not checked`);
-  }
-}
-restDayBox.forEach( box => {
-  box.addEventListener('click', handleClick)
-})
-
-
-
-// day schedule
-
 
 //sunday pull from db existing
 
@@ -30,7 +8,7 @@ const sundaySection = document.querySelector('.addcard1')
 const getSunday = () => {
   sundaySection.innerHTML = '';
 
-  axios.get('http://localhost:4000/api/schedule')
+  axios.get('http://localhost:4000/api/schedule/sunday')
   .then(res => {
     res.data.forEach(elem => {
       let sundayExercises = `
@@ -45,6 +23,11 @@ const getSunday = () => {
 document.getElementById('button1').addEventListener('click',getSunday)
 
 
+//sunday insert into db
+
+
+
+
 //monday insert into db 
 
 const mondaySection = document.querySelector('.addcard2')
@@ -54,15 +37,14 @@ const setsRepsMonday = document.getElementById('monsetsreps')
 const handleSubmit = event => {
   event.preventDefault();
 
-
-
   let body = {
     day: 'monday',
     exercises: exerciseMonday.value,
-    setsreps: setsRepsMonday
+    setsreps: setsRepsMonday.value
   }
 
-  axios.post('http://localhost:4004/cities', body)
+
+  axios.post('http://localhost:4000/api/schedule/monday', body)
   .then(() => {
     exerciseMonday.value = '',
     setsRepsMonday.value = ''
@@ -72,18 +54,27 @@ const handleSubmit = event => {
 }
 
 const getMonday = () => {
+
   mondaySection.innerHTML = '';
-  axios.post('http://localhost:4004/schedule')
+
+  axios.get('http://localhost:4000/api/schedule/monday')
   .then(res => {
     res.data.forEach(elem => {
       let mondayExercises = `
-      <p>${elem.exercises}, ${elem.setsreps}</p>
+      <p>-${elem.exercises}</p>
+      <p>${elem.setsreps}</p>
       `
       mondaySection.innerHTML += mondayExercises
     })
   })
 }
 
-
 document.getElementById('button2').addEventListener('click',handleSubmit)
+
+
+
+
+//get all days on load ?
+
+window.onload= getMonday()
 

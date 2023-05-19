@@ -18,13 +18,31 @@
     <h1>Contact Us</h1>
 
     <form>      
-        <input name="name" type="text" class="feedback-input" placeholder="Name" />   
-        <input name="email" type="text" class="feedback-input" placeholder="Email" />
-        <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-        <input type="submit" value="SUBMIT"/>
-    </form>
+        <input name="name" id="name1" type="text" class="feedback-input" placeholder="Name" />   
+        <input name="email" id="email" type="text" class="feedback-input" placeholder="Email" />
+        <textarea name="text" id="message1" class="feedback-input" placeholder="Comment"></textarea>
+        <input type="submit" id='pew' value="SUBMIT"/>
+    </form> 
 
     <script src="./contact.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="https://smtpjs.com/v3/smtp.js"></script>
+    
+
+
+    <form id="myForm">
+        <input type="text" id="myInput" placeholder="Enter a value">
+        <button type="button" id="myButton">Get Value</button>
+      </form>
+    
+      <script>
+        document.getElementById('myButton').addEventListener('click', function() {
+          var inputValue = document.getElementById('myInput').value;
+          alert('Input value: ' + inputValue);
+        });
+      </script>
+
 </body>
 </html>
+
+<!-- onclick="sendEmail(); reset(); return false;" -->

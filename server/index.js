@@ -14,13 +14,13 @@ app.post('/seed', seed)
 
 
 // EXERCISE CARD
-app.get('/api/exercises/:id', getExerciseCard)
+app.get('/api/exercises/:cardID', getExerciseCard)
 
 
 // WORKOUT SCHEDULE
-app.get('/api/schedule', getSunday)
-app.get('/api/schedule', getMonday)
-app.post('/api/schedule', postMonday)
+app.get('/api/schedule/sunday', getSunday)
+app.get('/api/schedule/monday', getMonday)
+app.post('/api/schedule/monday', postMonday)
 
 
 // PROGRESS
